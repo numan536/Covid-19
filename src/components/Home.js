@@ -10,45 +10,7 @@ class Home extends React.Component {
       <div>
 
         <div>
-          <Container fluid>
-            <Row>
-              <Col>
-                <div className='header'>
-                  <h1 style={{ textAlign: 'center', background: 'black', color: 'white' }}>Covid-19 A Panademic
-                  <br />
 
-                    <Link to="/">
-                      <button type="button" class="btn btn-primary">Home</button>
-                    </Link>
-
-                    <br />
-
-                    <Link to="/Table"> <button type="button" class="btn btn-secondary">Countries Data</button> </Link>
-
-                  </h1>
-
-                  <Container fluid>
-                    <Row style={{ background: 'black' }}>
-
-                      <Col></Col>
-                      <Col>
-                        <a href='https://hackerthemes.com/bootstrap-cheatsheet/'>
-                          <img src='/images/corona2.png' style={{ height: '200px', width: '200px', align: 'center', marginLeft: '20%' }} />
-                        </a>
-                      </Col>
-                      <Col></Col>
-
-                    </Row>
-                  </Container>
-
-
-                </div>
-
-              </Col>
-            </Row>
-
-
-          </Container >
         </div>
         <h1 style={{ textAlign: 'center' }}>Total Cases</h1>
         <br />

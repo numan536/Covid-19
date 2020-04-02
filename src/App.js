@@ -4,7 +4,7 @@ import Tablefor from './components/Tablefor';
 import axios from 'axios';
 import Home from './components/Home';
 import { BrowserRouter, Switch, Link } from 'react-router-dom';
-import { Row, Col, Container, Table } from 'react-bootstrap'
+import { Row, Col, Container, Table, Nav, Navbar } from 'react-bootstrap'
 import './App.css';
 import { Route } from 'react-router-dom';
 import Singlecountry from './components/Singlecontry'
@@ -37,11 +37,31 @@ class App extends React.Component {
     return (
       <div>
         <BrowserRouter>
+          <Container fluid>
+            <Row>
+              <Col>
 
+
+
+
+                <Navbar bg="dark" variant="dark">
+                  <Navbar.Brand href="/"><img src='/images/corona2.png' style={{ height: '30px', width: '30px', align: 'center', marginRight: 10 }} />Covid-19</Navbar.Brand>
+                  <Nav className="mr-auto">
+                    <Nav.Link><Link to="/">Total Cases</Link></Nav.Link>
+                    <Nav.Link><Link to="/countries">Countries</Link></Nav.Link>
+                  </Nav>
+
+                </Navbar>
+
+              </Col>
+            </Row>
+
+
+          </Container >
           <Switch>
 
             <Route exact path="/" render={(routeProps) => <Home {...routeProps} totalcount={this.state.totalcount} />} />
-            <Route path="/Table" render={(routeProps) => <Tablefor {...routeProps} data={this.state.allcountries} />} />
+            <Route path="/countries" render={(routeProps) => <Tablefor {...routeProps} data={this.state.allcountries} />} />
             <Route path="/singlecountry/:country" render={(routeProps) => <Singlecountry {...routeProps} />} />
 
           </Switch>
@@ -50,7 +70,7 @@ class App extends React.Component {
           <div>
             {/* <Tablefor data={this.state.allcountries} /> */}
           </div>
-          <Tablefor data={this.state.allcountries} />
+          {/* <Tablefor data={this.state.allcountries} /> */}
 
         </BrowserRouter>
 
