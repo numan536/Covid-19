@@ -8,7 +8,7 @@ class Tablefor extends React.Component {
   render() {
     return (
       <div container fluid>
-        <Table striped bordered hover>
+        <Table striped bordered hover responsive>
           <thead>
             <tr >
               <th>#</th>
