@@ -1,9 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import Tablefor from './components/Table';
+import Tablefor from './components/Tablefor';
 import axios from 'axios';
-import { Row, Col, Container } from 'react-bootstrap'
+import Home from './components/Home';
+import { BrowserRouter, Switch, Link } from 'react-router-dom';
+import { Row, Col, Container, Table } from 'react-bootstrap'
 import './App.css';
+import { Route } from 'react-router-dom';
+import Singlecountry from './components/Singlecontry'
 
 class App extends React.Component {
 
@@ -32,55 +36,28 @@ class App extends React.Component {
     console.log('this.state', this.state)
     return (
       <div>
-        <div>
-          <Container fluid>
-            <Row>
-              <Col>
-                <div className='header'>
-                  <h1 style={{ textAlign: 'center', background: 'black', color: 'white' }}>Covid-19 A Panademic
-                  </h1>
+        <BrowserRouter>
 
-                  <Container fluid>
-                    <Row style={{ background: 'black' }}>
+          <Switch>
 
-                      <Col></Col>
-                      <Col>
-                        <a href='https://hackerthemes.com/bootstrap-cheatsheet/'>
-                          <img src='/images/corona2.png' style={{ height: '200px', width: '200px', align: 'center', marginLeft: '20%' }} />
-                        </a>
-                      </Col>
-                      <Col></Col>
+            <Route exact path="/" render={(routeProps) => <Home {...routeProps} totalcount={this.state.totalcount} />} />
+            <Route path="/Table" render={(routeProps) => <Tablefor {...routeProps} data={this.state.allcountries} />} />
+            <Route path="/singlecountry/:country" render={(routeProps) => <Singlecountry {...routeProps} />} />
 
-                    </Row>
-                  </Container>
+          </Switch>
 
-
-                </div>
-
-              </Col>
-            </Row>
-
-
-          </Container >
-        </div>
-        <h1 style={{ textAlign: 'center' }}>Total Cases</h1>
-        <br />
-        <h1 style={{ textAlign: 'center', background: 'black', color: 'white' }}>{this.state.totalcount[0]?.total_case}</h1>
-        <br />
-        <h1 style={{ textAlign: 'center' }}>Total Deaths</h1>
-        <br />
-        <h1 style={{ textAlign: 'center', background: 'black', color: 'white' }}>{this.state.totalcount[0]?.total_deaths}</h1>
-        <br />
-        <h1 style={{ textAlign: 'center', }}>Total Recovered</h1>
-        <br />
-        <h1 style={{ textAlign: 'center', background: 'black', color: 'white' }}>{this.state.totalcount[0]?.total_recovered}</h1>
-
-        <div>
+          {/* < Home totalcount={this.state.totalcount} /> */}
+          <div>
+            {/* <Tablefor data={this.state.allcountries} /> */}
+          </div>
           <Tablefor data={this.state.allcountries} />
-        </div>
+
+        </BrowserRouter>
+
 
 
       </div>
+
     )
   }
 }
