@@ -37,27 +37,27 @@ class App extends React.Component {
     return (
       <div>
         <BrowserRouter>
-          <Container fluid>
-            <Row>
-              <Col>
+          {/* <Container fluid> */}
+          <Row>
+            <Col>
 
 
 
 
-                <Navbar bg="dark" variant="dark">
-                  <Navbar.Brand href="/"><img src='/images/corona2.png' style={{ height: '30px', width: '30px', align: 'center', marginRight: 10 }} />Covid-19</Navbar.Brand>
-                  <Nav className="mr-auto">
-                    <Nav.Link><Link to="/">Total Cases</Link></Nav.Link>
-                    <Nav.Link><Link to="/countries">Countries</Link></Nav.Link>
-                  </Nav>
+              <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="/"><img src='/images/corona2.png' style={{ height: '30px', width: '30px', align: 'center', marginRight: 10 }} />Covid-19</Navbar.Brand>
+                <Nav className="mr-auto">
+                  <Nav.Link><Link to="/">Total Cases</Link></Nav.Link>
+                  <Nav.Link><Link to="/countries">Countries</Link></Nav.Link>
+                </Nav>
 
-                </Navbar>
+              </Navbar>
 
-              </Col>
-            </Row>
+            </Col>
+          </Row>
 
 
-          </Container >
+          {/* </Container > */}
           <Switch>
 
             <Route exact path="/" render={(routeProps) => <Home {...routeProps} totalcount={this.state.totalcount} />} />

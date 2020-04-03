@@ -40,7 +40,7 @@ class Tablefor extends React.Component {
                     <td>{item.new_case}</td>
                     <td>{item.total_deaths}</td>
                     <td style={{ background: item.new_deaths ? 'red' : '' }}>{item.new_deaths}</td>
-                    <td style={{ background: '#28a745' }}>{item.total_recovered}</td>
+                    <td style={{ background: item.total_recovered ? '#28a745' : '' }}>{item.total_recovered}</td>
                     <td>{item.active_cases}</td>
                     <td>{item.critical_cases}</td>
                   </tr>
