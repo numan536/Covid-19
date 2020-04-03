@@ -45,7 +45,7 @@ class App extends React.Component {
 
 
               <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="/"><img src='/images/corona2.png' style={{ height: '30px', width: '30px', align: 'center', marginRight: 10 }} />Covid-19</Navbar.Brand>
+                <Navbar.Brand href="/"><img src='/images/corona-logo-1.png' style={{ height: '50px', width: '50px', align: 'center', marginRight: 10 }} />Covid-19</Navbar.Brand>
                 <Nav className="mr-auto">
                   <Nav.Link><Link to="/">Total Cases</Link></Nav.Link>
                   <Nav.Link><Link to="/countries">Countries</Link></Nav.Link>
