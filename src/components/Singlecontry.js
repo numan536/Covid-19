@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import ChartsPage from './Chart2';
 class Singlecountry extends React.Component {
 
     state = {
@@ -17,6 +17,8 @@ class Singlecountry extends React.Component {
 
             }).catch(() => console.log('error'));
     }
+
+
 
     render() {
         console.log('this is this.props in single contry', this.state)
@@ -38,6 +40,8 @@ class Singlecountry extends React.Component {
                 <h1 style={{ textAlign: 'center', }}>Total Recovered </h1>
                 <br />
                 <h1 style={{ textAlign: 'center', background: 'black', color: 'white' }}>{this.state.eachData[0]?.total_recovered}</h1>
+
+                <ChartsPage data={this.state.eachData} />
 
             </div >
         )
