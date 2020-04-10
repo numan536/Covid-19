@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { MDBContainer } from "mdbreact";
+import { HashRouter } from "react-router-dom";
 class ChartsPage extends React.Component {
 
 
@@ -77,10 +78,12 @@ class ChartsPage extends React.Component {
 
 
         return (
-            <MDBContainer>
-                <h3 className="mt-5">Country</h3>
-                <Bar data={totaldata.dataBar} options={totaldata.barChartOptions} />
-            </MDBContainer>
+            <HashRouter>
+                <MDBContainer>
+                    <h3 className="mt-5">Country</h3>
+                    <Bar data={totaldata.dataBar} options={totaldata.barChartOptions} />
+                </MDBContainer>
+            </HashRouter>
         );
     }
 }

@@ -30,11 +30,12 @@ class Tablefor extends React.Component {
                   <tr>
 
                     <td>{item.ID}</td>
+                    <td>
+                      <Link to={`/singlecountry/${item.country}`}>
 
-                    <Link to={`/singlecountry/${item.country}`}>
-
-                      <td>{item.country}</td>
-                    </Link>
+                        {item.country}
+                      </Link>
+                    </td>
 
                     <td >{item.total_case}</td>
                     <td>{item.new_case}</td>
