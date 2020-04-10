@@ -11,21 +11,21 @@ class Home extends React.Component {
 
 
         <div>
-          <div style={{ background: "url('/images/corona5.png') no-repeat center", width: "100%", height: "600px", align: 'center', backgroundSize: 'cover' }}>
-            <h1 style={{ textAlign: 'center', color: 'white' }}>Total Cases</h1>
+          <div style={{ background: "url('/images/corona8.png') no-repeat center", width: "100%", height: "600px", align: 'center', backgroundSize: 'cover' }}>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>Total Cases</h1>
             <br />
-            <h1 style={{ textAlign: 'center', background: 'Lightblack', color: 'white' }}>{this.props.totalcount[0]?.total_case}</h1>
+            <h1 style={{ textAlign: 'center', background: 'Lightblack', color: 'black' }}>{this.props.totalcount[0]?.total_case}</h1>
             <br />
-            <h1 style={{ textAlign: 'center', color: 'white' }}>Total Deaths</h1>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>Total Deaths</h1>
             <br />
-            <h1 style={{ textAlign: 'center', color: 'white' }}>{this.props.totalcount[0]?.total_deaths}</h1>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>{this.props.totalcount[0]?.total_deaths}</h1>
             <br />
-            <h1 style={{ textAlign: 'center', color: 'white' }}>Total Recovered</h1>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>Total Recovered</h1>
             <br />
-            <h1 style={{ textAlign: 'center', color: 'white' }}>{this.props.totalcount[0]?.total_recovered}</h1>
-            <h1 style={{ textAlign: 'center', color: 'white' }}>Critical Cases</h1>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>{this.props.totalcount[0]?.total_recovered}</h1>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>Critical Cases</h1>
             <br />
-            <h1 style={{ textAlign: 'center', color: 'white' }}>{this.props.totalcount[0]?.critical_cases}</h1>
+            <h1 style={{ textAlign: 'center', color: 'black' }}>{this.props.totalcount[0]?.critical_cases}</h1>
           </div>
         </div>
       </div >
