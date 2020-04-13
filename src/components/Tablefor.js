@@ -6,8 +6,12 @@ import Singlecountry from './Singlecontry';
 
 class Tablefor extends React.Component {
   render() {
+    const myData = [].concat(this.props.data)
+      .sort((a, b) => parseInt(b.total_case.replace(",", "")) - parseInt(a.total_case.replace(",", "")))
+    console.log('muData', myData)
     return (
-      <div container fluid>
+      < div container fluid>
+
         <Table striped bordered hover responsive>
           <thead>
             <tr >
@@ -24,8 +28,9 @@ class Tablefor extends React.Component {
             </tr>
           </thead>
           <tbody>
+
             {
-              this.props.data.map(item => {
+              myData.map(item => {
                 return (
                   <tr>
 
@@ -37,8 +42,8 @@ class Tablefor extends React.Component {
                       </Link>
                     </td>
 
-                    <td >{item.total_case}</td>
-                    <td>{item.new_case}</td>
+                    <td>{item.total_case}</td>
+                    <td style={{ background: '#ffb100' }}>{item.new_case}</td>
                     <td>{item.total_deaths}</td>
                     <td style={{ background: item.new_deaths ? 'red' : '' }}>{item.new_deaths}</td>
                     <td style={{ background: item.total_recovered ? '#28a745' : '' }}>{item.total_recovered}</td>
@@ -51,7 +56,7 @@ class Tablefor extends React.Component {
 
           </tbody>
         </Table>
-      </div>
+      </div >
     )
   }
 }

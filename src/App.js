@@ -14,12 +14,12 @@ import ChartsPage from './components/Chart2';
 
 
 class App extends React.Component {
-
   state = {
     allcountries: [],
     totalcount: [],
     eachData: []
   }
+
 
 
   componentDidMount() {
